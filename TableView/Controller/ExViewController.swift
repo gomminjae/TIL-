@@ -19,7 +19,7 @@ class ExViewController: UIViewController {
 
     }
     
-
+   //셀 추가 버튼
     @IBAction func addContent(_ sender: Any) {
         let alertController = UIAlertController(title: "추가하기", message: "정보를 입력하시오 ", preferredStyle: .alert)
         
@@ -47,10 +47,13 @@ class ExViewController: UIViewController {
 
 
 extension ExViewController: UITableViewDataSource {
+    
+    //셀 개수
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return content.count
     }
     
+    //셀 정보 표사ㅣ
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? tableCell else {
             return UITableViewCell()
@@ -59,6 +62,18 @@ extension ExViewController: UITableViewDataSource {
         
         return cell
     }
+    
+    //Swipe 삭제
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+            content.remove(at: indexPath.row)
+            Table.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+        }
+    }
+    
+    
+    
+    
 }
 
         
