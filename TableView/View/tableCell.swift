@@ -10,14 +10,11 @@ import UIKit
 
 class tableCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var subtitleLabel: UILabel!
     
+    func configure(content: Content) {
+        titleLabel.text = content.titles
+    }
     
-//    func configure(content: Content) {
-//        titleLabel.text = "title"
-//        subtitleLabel.text = "subtitle"
-//    }
-//
-    
+
 
 }
