@@ -1,0 +1,16 @@
+{
+
+	"person": {
+		{
+			"name": "Bob",
+			"age": "18",
+			"employed": "No"
+		},
+
+		{
+			"name": "Bib",
+			"age": "45",
+			"employed": "Yes"
+		}
+	}
+}
