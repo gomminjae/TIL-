@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Floating_Button" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Moon _ Sanharmloung _ Bangkok _ Thailand.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="TyK-ka-csN">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fG3-cp-gg5">
+                                <rect key="frame" x="289" y="741" width="70" height="70"/>
+                                <state key="normal" title="Button" image="add_icon_green.png"/>
+                                <connections>
+                                    <segue destination="TJb-hU-iI4" kind="show" identifier="showPopUp" animates="NO" id="eYg-sJ-8QZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="fG3-cp-gg5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="289" id="5CV-13-nbF"/>
+                            <constraint firstItem="TyK-ka-csN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ihk-UD-zvT"/>
+                            <constraint firstAttribute="trailing" secondItem="TyK-ka-csN" secondAttribute="trailing" id="LMv-Hg-ksb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fG3-cp-gg5" secondAttribute="trailing" constant="55" id="Lfi-Bu-ikh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fG3-cp-gg5" secondAttribute="bottom" constant="51" id="VOT-8o-aED"/>
+                            <constraint firstItem="fG3-cp-gg5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="697" id="ePk-aB-bMR"/>
+                            <constraint firstItem="TyK-ka-csN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ii3-f9-DbC"/>
+                            <constraint firstAttribute="bottom" secondItem="TyK-ka-csN" secondAttribute="bottom" id="mrA-2o-ADW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="byn" destination="fG3-cp-gg5" id="tTX-ic-E90"/>
+                        <outlet property="img" destination="TyK-ka-csN" id="Ja4-Tm-PQt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-448" y="-834"/>
+        </scene>
+        <!--Floating Btn List View Controller-->
+        <scene sceneID="gaY-Y3-2WM">
+            <objects>
+                <viewController id="TJb-hU-iI4" customClass="FloatingBtnListViewController" customModule="Floating_Button" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wPy-8T-66g">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fsE-KR-wtC">
+                                <rect key="frame" x="289" y="697" width="70" height="60"/>
+                                <state key="normal" title="add" image="add_icon_green.png"/>
+                                <connections>
+                                    <action selector="dismissBtn:" destination="TJb-hU-iI4" eventType="touchUpInside" id="qeA-5p-VyN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofs-ry-pX5">
+                                <rect key="frame" x="294" y="617" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="7Tg-dp-ctj"/>
+                                    <constraint firstAttribute="height" constant="60" id="odl-o5-DnA"/>
+                                </constraints>
+                                <state key="normal" title="1" image="food1.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QjB-zf-fBp">
+                                <rect key="frame" x="294" y="537" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="56H-hh-1i4"/>
+                                    <constraint firstAttribute="width" constant="60" id="7X7-1O-4Mp"/>
+                                </constraints>
+                                <state key="normal" title="2" image="food2.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mya-VX-gWQ">
+                                <rect key="frame" x="294" y="457" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="ZPV-rb-wy5"/>
+                                    <constraint firstAttribute="height" constant="60" id="bzt-WO-RYY"/>
+                                </constraints>
+                                <state key="normal" title="3" image="food3.png"/>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="ehc-lw-kSr" firstAttribute="bottom" secondItem="fsE-KR-wtC" secondAttribute="bottom" constant="51" id="Dri-KB-t1M"/>
+                            <constraint firstItem="fsE-KR-wtC" firstAttribute="centerX" secondItem="QjB-zf-fBp" secondAttribute="centerX" id="O8D-1C-aua"/>
+                            <constraint firstItem="fsE-KR-wtC" firstAttribute="centerX" secondItem="mya-VX-gWQ" secondAttribute="centerX" id="UCK-Ja-ePJ"/>
+                            <constraint firstItem="fsE-KR-wtC" firstAttribute="leading" secondItem="ehc-lw-kSr" secondAttribute="leading" constant="289" id="btx-sE-kdS"/>
+                            <constraint firstItem="ehc-lw-kSr" firstAttribute="trailing" secondItem="fsE-KR-wtC" secondAttribute="trailing" constant="55" id="cHW-Aa-o13"/>
+                            <constraint firstItem="fsE-KR-wtC" firstAttribute="centerY" secondItem="QjB-zf-fBp" secondAttribute="centerY" constant="160" id="cJP-Ul-vCT"/>
+                            <constraint firstItem="fsE-KR-wtC" firstAttribute="centerY" secondItem="mya-VX-gWQ" secondAttribute="centerY" constant="240" id="cKm-4F-AzM"/>
+                            <constraint firstItem="fsE-KR-wtC" firstAttribute="centerX" secondItem="ofs-ry-pX5" secondAttribute="centerX" id="eCu-DS-qDz"/>
+                            <constraint firstItem="fsE-KR-wtC" firstAttribute="centerY" secondItem="ofs-ry-pX5" secondAttribute="centerY" constant="80" id="ggD-Iv-Yhi"/>
+                            <constraint firstItem="fsE-KR-wtC" firstAttribute="top" secondItem="ehc-lw-kSr" secondAttribute="top" constant="697" id="kVf-DK-kLl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ehc-lw-kSr"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="eyE-15-Wy6"/>
+                    <connections>
+                        <outlet property="btnCenter1" destination="ggD-Iv-Yhi" id="Stf-SZ-Vuw"/>
+                        <outlet property="btnCenter2" destination="cJP-Ul-vCT" id="hja-At-by3"/>
+                        <outlet property="btnCenter3" destination="cKm-4F-AzM" id="6gh-Ub-DEN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oNN-aJ-KT0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="364" y="-860"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Moon _ Sanharmloung _ Bangkok _ Thailand.jpg" width="1200" height="1800"/>
+        <image name="add_icon_green.png" width="385.60000610351562" height="384.79998779296875"/>
+        <image name="food1.png" width="256" height="256"/>
+        <image name="food2.png" width="256" height="256"/>
+        <image name="food3.png" width="256" height="256"/>
+    </resources>
+</document>
