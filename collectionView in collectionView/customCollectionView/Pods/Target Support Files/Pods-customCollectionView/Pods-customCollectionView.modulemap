@@ -1,0 +1,6 @@
+framework module Pods_customCollectionView {
+  umbrella header "Pods-customCollectionView-umbrella.h"
+
+  export *
+  module * { export * }
+}
