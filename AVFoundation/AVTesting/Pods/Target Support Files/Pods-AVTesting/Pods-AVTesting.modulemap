@@ -1,0 +1,6 @@
+framework module Pods_AVTesting {
+  umbrella header "Pods-AVTesting-umbrella.h"
+
+  export *
+  module * { export * }
+}
